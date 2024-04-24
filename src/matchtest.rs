@@ -1,3 +1,24 @@
+pub fn test_match_int() {
+    let myage: u16 = 45;
+
+    match myage {
+        35 => {
+            println!("yea you are old");
+        }
+        36..=100 =>{
+            println!("You lived a good life");
+        }
+
+        101 | 111 => println!("You are lucky"),
+        
+        _ => {
+            println!("listen this is default");
+            println!("or else do it exhaustive");
+
+        }
+    }
+}
+
 pub fn test_match() {
     let y: u8 = 45;
     let x: u8 = 12;

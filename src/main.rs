@@ -1,11 +1,34 @@
 pub mod matchtest;
 pub mod optiontest;
+pub mod helpers;
+pub mod structs;
+
+struct Person {
+    first_name: String,
+    last_name: String,
+}
 fn main() {
+    println!("Hello, Rust people!");
+
+    let my_result = helpers::namehelpers::get_full_name("Troy", "Lemur");
+    println!("Hello, this is {0}", my_result);
+
+    let new_age = helpers::privatefns::get_age_plus_5(12);
+    println!("Age {0}", new_age);
     println!("Hello, world!");
+
+    // let new_age = helpers::privatefns::get_age_plus_5(12);
+    // println!("Age {0}", new_age);
+    // test_closure_one();
+    // test_closure_two();
+    // test_closure();
+    // matches::test_match_int();
+
     test_closure_without_params();
     test_closure_with_params();
     test_wow_closures();
     test_long_closures();
+    matchtest::test_match_int();
     matchtest::test_match();
     matchtest::test_match_array();
     matchtest::test_match_string();
@@ -16,6 +39,19 @@ fn main() {
     //check_age();
 
     println!("{}", more_result.unwrap());
+
+    let game_result = optiontest::test_option_chartype();
+
+    if game_result.is_some() {
+        println!("User has selected a character");        
+        println!("{}", game_result.unwrap().to_string());
+    }
+    else {
+        println!("Character not selected");
+    }
+
+    //structs::new_person();
+    structs::test_create_person();
 }
 
 fn check_age() {
@@ -56,4 +92,33 @@ pub fn test_long_closures() {
 
     let print_result = || println!("The result is: {}", result);
     print_result();
+}
+
+#[allow(dead_code)]
+
+fn ill(){
+
+}
+pub fn test_closure_one() {
+     let add_static = || println!("{}+{}={}", 1,2,3);
+     add_static();
+}
+
+pub fn test_closure_two() {
+     let add = |x, y| {
+        println!("{}, {}", x,y);
+        x+y
+     };
+     let answer = add(112, -345);
+     println!("{}", answer);
+}
+
+pub fn test_closure() {
+
+    let mut p1 = Person{first_name: "Shawnon".to_string(), last_name: "Guedes".to_string()};
+
+    let mut change_name = |new_last_name: &str| p1.last_name = new_last_name.to_string();
+    change_name("Yesthat");
+    println!("{}", p1.last_name);
+
 }
