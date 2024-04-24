@@ -1,10 +1,21 @@
+pub mod matchtest;
+pub mod optiontest;
 fn main() {
     println!("Hello, world!");
     test_closure_without_params();
     test_closure_with_params();
     test_wow_closures();
     test_long_closures();
-    check_age();
+    matchtest::test_match();
+    matchtest::test_match_array();
+    matchtest::test_match_string();
+    let result = optiontest::test_options();
+    println!("{}", result.unwrap());
+
+    let more_result = optiontest::test_option_string();
+    //check_age();
+
+    println!("{}", more_result.unwrap());
 }
 
 fn check_age() {
