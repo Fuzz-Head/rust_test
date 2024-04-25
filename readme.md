@@ -1,4 +1,4 @@
-[x] - Rust data types and variables
+[x] - Rust data types and variables <br/>
 [x] - Rust functions and modules
 [x] - Rust Control flow statements and conditional expressions
 [x] - Rust closures - Anonymous functions
