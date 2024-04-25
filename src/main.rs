@@ -1,7 +1,11 @@
+use crate::structs::{create_vehicle, test_create_person};
+
+pub mod helpers;
 pub mod matchtest;
 pub mod optiontest;
-pub mod helpers;
 pub mod structs;
+pub mod traits;
+pub mod vec;
 
 struct Person {
     first_name: String,
@@ -43,15 +47,20 @@ fn main() {
     let game_result = optiontest::test_option_chartype();
 
     if game_result.is_some() {
-        println!("User has selected a character");        
+        println!("User has selected a character");
         println!("{}", game_result.unwrap().to_string());
-    }
-    else {
+    } else {
         println!("Character not selected");
     }
 
     //structs::new_person();
     structs::test_create_person();
+    create_vehicle();
+    structs::create_vehicle_tuple();
+
+    traits::create_person();
+
+    vec::test_vec_int();
 }
 
 fn check_age() {
@@ -96,29 +105,28 @@ pub fn test_long_closures() {
 
 #[allow(dead_code)]
 
-fn ill(){
-
-}
+fn ill() {}
 pub fn test_closure_one() {
-     let add_static = || println!("{}+{}={}", 1,2,3);
-     add_static();
+    let add_static = || println!("{}+{}={}", 1, 2, 3);
+    add_static();
 }
 
 pub fn test_closure_two() {
-     let add = |x, y| {
-        println!("{}, {}", x,y);
-        x+y
-     };
-     let answer = add(112, -345);
-     println!("{}", answer);
+    let add = |x, y| {
+        println!("{}, {}", x, y);
+        x + y
+    };
+    let answer = add(112, -345);
+    println!("{}", answer);
 }
 
 pub fn test_closure() {
-
-    let mut p1 = Person{first_name: "Shawnon".to_string(), last_name: "Guedes".to_string()};
+    let mut p1 = Person {
+        first_name: "Hillary".to_string(),
+        last_name: "Clinton".to_string(),
+    };
 
     let mut change_name = |new_last_name: &str| p1.last_name = new_last_name.to_string();
     change_name("Yesthat");
     println!("{}", p1.last_name);
-
 }
