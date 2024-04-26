@@ -1,12 +1,15 @@
 use crate::structs::{create_vehicle, test_create_person};
 
+pub mod datetime;
+pub mod hashmaps;
+pub mod hashsets;
 pub mod helpers;
+pub mod iters;
 pub mod matchtest;
 pub mod optiontest;
 pub mod structs;
 pub mod traits;
 pub mod vec;
-pub mod hashmaps;
 
 struct Person {
     first_name: String,
@@ -65,8 +68,15 @@ fn main() {
     vec::test_vec_string();
     vec::test_vec_car();
 
-
     hashmaps::test_hashmaps();
+
+    hashsets::test_hashsets();
+
+    iters::test_iterators();
+
+    datetime::test_stdtime();
+
+    datetime::test_chrono();
 }
 
 fn check_age() {
@@ -75,7 +85,7 @@ fn check_age() {
     println!("Enter the person's age:");
     let myinput = &mut String::from("");
 
-    std::io::stdin().read_line(myinput).unwrap();//discard the returned result with unwrap()
+    std::io::stdin().read_line(myinput).unwrap(); //discard the returned result with unwrap()
 
     let age = myinput.replace("/n", "").parse::<u8>().unwrap();
     if age >= age_to_drive {

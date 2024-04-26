@@ -1,5 +1,3 @@
-use std::net::ToSocketAddrs;
-
 pub fn test_vec_int() {
     let mut my_ints: Vec<i32> = Vec::new();
 
@@ -16,14 +14,12 @@ pub fn test_vec_int() {
     println!("The first element in vec is {}", my_ints[0]);
     println!("The second element in vec is {}", my_ints[1]);
 
-
     println!("Wow a slice: {:?}", &(&my_ints).as_slice()[0..=2]);
     println!("great get {:?}", my_ints.get(2));
 }
 
-
 pub fn test_vec_string() {
-    let first_names= vec!["Billy", "Rachel", "Nancy", "Shannon"];
+    let first_names = vec!["Billy", "Rachel", "Nancy", "Shannon"];
 
     for first_name in first_names.clone() {
         println!("processing... {}", first_name);
@@ -38,25 +34,43 @@ struct Car {
     model: String,
 }
 
-pub fn test_vec_car (){
+pub fn test_vec_car() {
     let mut car_list: Vec<Car> = vec![];
     let mut car_list2: Vec<Car> = vec![];
 
     for _ in 1..=100u8 {
-        car_list.push(Car{manufacture: "Porche".to_string(), model: "Panamera".to_string()});
+        car_list.push(Car {
+            manufacture: "Porche".to_string(),
+            model: "Panamera".to_string(),
+        });
     }
 
     for _ in 1..=100u8 {
-        car_list2.push(Car{manufacture: "Hyundai".to_string(), model: "Sonata".to_string()});
+        car_list2.push(Car {
+            manufacture: "Hyundai".to_string(),
+            model: "Sonata".to_string(),
+        });
     }
 
     car_list.append(&mut car_list2);
-    car_list.insert(0, Car{manufacture: "Mercedes".to_string(), model: "S-Class".to_string()});
+    car_list.insert(
+        0,
+        Car {
+            manufacture: "Mercedes".to_string(),
+            model: "S-Class".to_string(),
+        },
+    );
     car_list.remove(6);
 
-    let keep = |e: &Car| {if e.manufacture == "Porche" { return true;} {return false;}};
+    let keep = |e: &Car| {
+        if e.manufacture == "Porche" {
+            return true;
+        }
+        {
+            return false;
+        }
+    };
     car_list.retain(keep);
-
 
     car_list.reserve(5000);
 
@@ -66,7 +80,6 @@ pub fn test_vec_car (){
 
     println!("{:?}", car_list.get(0).unwrap());
 
-    let mut input:String ="".to_string();
+    let mut input: String = "".to_string();
     //std::io::stdin().read_line(&mut input).expect("Something bad happened");
-
 }
