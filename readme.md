@@ -10,9 +10,9 @@
 [x] - Rust vec type for dynamic arrays<br/>
 [x] - Rust hashmaps and hashset collections<br/>
 [x] - Rust iterator methods<br/>
-[] - Rust time module and chrono crate<br/>
-[] - Rust threading basics<br/>
-[] - Rust scoped threads<br/>
+[x] - Rust time module and chrono crate<br/>
+[x] - Rust threading basics<br/>
+[x] - Rust scoped threads<br/>
 [] - Rust threads with mutexes<br/>
 [] - Message passing with Rust MPSC channels<br/>
 [] - Rust file system<br/>

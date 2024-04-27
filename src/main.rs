@@ -10,6 +10,8 @@ pub mod optiontest;
 pub mod structs;
 pub mod traits;
 pub mod vec;
+pub mod threads;
+pub mod scopedthreads;
 
 struct Person {
     first_name: String,
@@ -77,6 +79,10 @@ fn main() {
     datetime::test_stdtime();
 
     datetime::test_chrono();
+
+    //threads::test_threads();
+    //threads::spawn_thread();
+    scopedthreads::test_scoped_thread();
 }
 
 fn check_age() {

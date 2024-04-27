@@ -1,4 +1,6 @@
 use std::time::{Duration, Instant};
+
+use chrono::NaiveDate;
 extern crate chrono;
 
 pub fn test_stdtime() {
@@ -27,4 +29,14 @@ pub fn test_chrono() {
     let date1 = chrono::NaiveDate::from_isoywd_opt(2024, 1, chrono::Weekday::Fri);
     let unwrapped_date = date1.unwrap();
     println!("{}", unwrapped_date.format("Day of the year is: %j"));
+
+    unwrapped_date.iter_days().take(4).for_each(|d| println!("{}", d.format("%j")));
+
+    let date2 = NaiveDate::from_yo_opt(2024, 366);
+    println!("{}", date2.unwrap().format("%A"));
+
+    //if format varies then program panics
+    let birthday = NaiveDate::parse_from_str("2024|||09||12", "%Y|||%m||%d");
+    //println!("{:#?}", birthday.err().unwrap());
+    println!("{:?}", birthday.ok().unwrap());
 }
