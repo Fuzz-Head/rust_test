@@ -13,9 +13,9 @@
 [x] - Rust time module and chrono crate<br/>
 [x] - Rust threading basics<br/>
 [x] - Rust scoped threads<br/>
-[] - Rust threads with mutexes<br/>
-[] - Message passing with Rust MPSC channels<br/>
-[] - Rust file system<br/>
+[X] - Rust threads with mutexes<br/>
+[x] - Message passing with Rust MPSC channels<br/>
+[x] - Rust file system<br/>
 [] - Rust cargo tool<br/>
 [] - CLI arguments with Rust standard crate<br/>
 [] - Parse rust CLI with clap<br/>

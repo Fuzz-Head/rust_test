@@ -1,17 +1,22 @@
+use std::sync::mpsc;
+
 use crate::structs::{create_vehicle, test_create_person};
 
 pub mod datetime;
+pub mod filesystem;
 pub mod hashmaps;
 pub mod hashsets;
 pub mod helpers;
 pub mod iters;
 pub mod matchtest;
+pub mod mpscchannel;
+pub mod mutexes;
 pub mod optiontest;
+pub mod scopedthreads;
 pub mod structs;
+pub mod threads;
 pub mod traits;
 pub mod vec;
-pub mod threads;
-pub mod scopedthreads;
 
 struct Person {
     first_name: String,
@@ -20,7 +25,7 @@ struct Person {
 fn main() {
     println!("Hello, Rust people!");
 
-    let my_result = helpers::namehelpers::get_full_name("Troy", "Lemur");
+    /*let my_result = helpers::namehelpers::get_full_name("Troy", "Lemur");
     println!("Hello, this is {0}", my_result);
 
     let new_age = helpers::privatefns::get_age_plus_5(12);
@@ -83,6 +88,16 @@ fn main() {
     //threads::test_threads();
     //threads::spawn_thread();
     scopedthreads::test_scoped_thread();
+
+    mutexes::test_mutex();
+
+    mpscchannel::test_mpsc();
+    */
+
+    filesystem::create_dir();
+    filesystem::create_files();
+    //filesystem::remove_dir();
+    filesystem::read_files();
 }
 
 fn check_age() {
