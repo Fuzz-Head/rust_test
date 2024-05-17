@@ -17,9 +17,9 @@
 [x] - Message passing with Rust MPSC channels<br/>
 [x] - Rust file system<br/>
 [] - Rust cargo tool<br/>
-[] - CLI arguments with Rust standard crate<br/>
+[X] - CLI arguments with Rust standard crate<br/>
 [] - Parse rust CLI with clap<br/>
-[] - Rust JSON<br/>
+[X] - Rust JSON<br/>
 [] - HTTP requests in Rust<br/>
 [] - Dynamic Dispatch traits in Rust<br/>
 [] - Simple Rust default trait<br/>

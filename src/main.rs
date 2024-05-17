@@ -16,6 +16,7 @@ pub mod scopedthreads;
 pub mod structs;
 pub mod threads;
 pub mod traits;
+pub mod try_serde;
 pub mod vec;
 
 struct Person {
@@ -94,10 +95,13 @@ fn main() {
     mpscchannel::test_mpsc();
     */
 
-    filesystem::create_dir();
-    filesystem::create_files();
-    //filesystem::remove_dir();
-    filesystem::read_files();
+    // filesystem::create_dir();
+    // filesystem::create_files();
+    // //filesystem::remove_dir();
+    // filesystem::read_files();
+
+    try_serde::test_serde();
+    try_serde::test_deser();
 }
 
 fn check_age() {
