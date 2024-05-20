@@ -13,17 +13,17 @@
 [x] - Rust time module and chrono crate<br/>
 [x] - Rust threading basics<br/>
 [x] - Rust scoped threads<br/>
-[X] - Rust threads with mutexes<br/>
+[x] - Rust threads with mutexes<br/>
 [x] - Message passing with Rust MPSC channels<br/>
 [x] - Rust file system<br/>
 [] - Rust cargo tool<br/>
-[X] - CLI arguments with Rust standard crate<br/>
+[x] - CLI arguments with Rust standard crate<br/>
 [] - Parse rust CLI with clap<br/>
-[X] - Rust JSON<br/>
+[x] - Rust JSON<br/>
 [] - HTTP requests in Rust<br/>
-[] - Dynamic Dispatch traits in Rust<br/>
-[] - Simple Rust default trait<br/>
-[] - Operator overloading in Rust<br/>
+[x] - Dynamic Dispatch traits in Rust<br/>
+[x] - Simple Rust default trait<br/>
+[x] - Operator overloading in Rust<br/>
 [] - Rust documentation<br/>
 [] - Linting Rust with Clippy CLI<br/>
 [] - Rust Async functions<br/>

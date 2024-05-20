@@ -3,6 +3,8 @@ use std::sync::mpsc;
 use crate::structs::{create_vehicle, test_create_person};
 
 pub mod datetime;
+pub mod default_everything;
+pub mod dynamic_dispatch;
 pub mod filesystem;
 pub mod hashmaps;
 pub mod hashsets;
@@ -11,6 +13,7 @@ pub mod iters;
 pub mod matchtest;
 pub mod mpscchannel;
 pub mod mutexes;
+pub mod operator_overloading;
 pub mod optiontest;
 pub mod scopedthreads;
 pub mod structs;
@@ -52,7 +55,7 @@ fn main() {
     println!("{}", result.unwrap());
 
     let more_result = optiontest::test_option_string();
-    //check_age();
+    check_age();
 
     println!("{}", more_result.unwrap());
 
@@ -100,8 +103,15 @@ fn main() {
     // //filesystem::remove_dir();
     // filesystem::read_files();
 
-    try_serde::test_serde();
-    try_serde::test_deser();
+    // try_serde::test_serde();
+    // try_serde::test_deser();
+
+    //dynamic_dispatch::dynamic_dispatch_traits();
+
+    //default_everything::test_defaults();
+
+    operator_overloading::overloading_test();
+    operator_overloading::grocery_bill_generation();
 }
 
 fn check_age() {
