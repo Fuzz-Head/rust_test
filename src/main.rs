@@ -15,6 +15,7 @@ pub mod mpscchannel;
 pub mod mutexes;
 pub mod operator_overloading;
 pub mod optiontest;
+pub mod reqwests;
 pub mod scopedthreads;
 pub mod structs;
 pub mod threads;
@@ -110,8 +111,10 @@ fn main() {
 
     //default_everything::test_defaults();
 
-    operator_overloading::overloading_test();
-    operator_overloading::grocery_bill_generation();
+    // operator_overloading::overloading_test();
+    // operator_overloading::grocery_bill_generation();
+
+    reqwests::reqwests_test();
 }
 
 fn check_age() {
