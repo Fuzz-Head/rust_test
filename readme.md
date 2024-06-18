@@ -20,17 +20,17 @@
 [x] - CLI arguments with Rust standard crate<br/>
 [] - Parse rust CLI with clap<br/>
 [x] - Rust JSON<br/>
-[] - HTTP requests in Rust<br/>
+[x] - HTTP requests in Rust<br/>
 [x] - Dynamic Dispatch traits in Rust<br/>
 [x] - Simple Rust default trait<br/>
 [x] - Operator overloading in Rust<br/>
 [] - Rust documentation<br/>
-[] - Linting Rust with Clippy CLI<br/>
-[] - Rust Async functions<br/>
-[] - Rust async future trait<br/>
+[x] - Linting Rust with Clippy CLI<br/>
+[x] - Rust Async functions<br/>
+[x] - Rust async tokio future trait<br/>
 [] - Spawn external processes with Rust<br/>
 [] - Rust CSV files<br/>
 [] - Rust regular expressions<br/>
 [] - AWS API With Rust<br/>
-[]- Unit testing in Rust<br/>
+[] - Unit testing in Rust<br/>
 [] - Organize Rust with Cargo<br/>
