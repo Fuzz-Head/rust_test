@@ -24,6 +24,9 @@ pub mod try_serde;
 pub mod vec;
 pub mod asyncs;
 pub mod tokioooo;
+pub mod spawn;
+pub mod csv;
+pub mod regex;
 
 
 struct Person {
@@ -146,6 +149,12 @@ fn main() {
        std::thread::sleep(std::time::Duration::from_millis(300));
    }
   */
+
+  //spawn::test();
+  //csv::testCSV();
+
+  regex::test();
+
 }
 
 /*------------------------------------------------tokio 

@@ -28,8 +28,8 @@
 [x] - Linting Rust with Clippy CLI<br/>
 [x] - Rust Async functions<br/>
 [x] - Rust async tokio future trait<br/>
-[] - Spawn external processes with Rust<br/>
-[] - Rust CSV files<br/>
+[x] - Spawn external processes with Rust<br/>
+[x] - Rust CSV files<br/>
 [] - Rust regular expressions<br/>
 [] - AWS API With Rust<br/>
 [] - Unit testing in Rust<br/>
