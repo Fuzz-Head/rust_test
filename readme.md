@@ -18,7 +18,7 @@
 [x] - Rust file system<br/>
 [] - Rust cargo tool<br/>
 [x] - CLI arguments with Rust standard crate<br/>
-[] - Parse rust CLI with clap<br/>
+[x] - Parse rust CLI with clap<br/>
 [x] - Rust JSON<br/>
 [x] - HTTP requests in Rust<br/>
 [x] - Dynamic Dispatch traits in Rust<br/>
@@ -30,7 +30,7 @@
 [x] - Rust async tokio future trait<br/>
 [x] - Spawn external processes with Rust<br/>
 [x] - Rust CSV files<br/>
-[] - Rust regular expressions<br/>
+[x] - Rust regular expressions<br/>
 [] - AWS API With Rust<br/>
 [] - Unit testing in Rust<br/>
 [] - Organize Rust with Cargo<br/>

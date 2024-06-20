@@ -27,6 +27,7 @@ pub mod tokioooo;
 pub mod spawn;
 pub mod csv;
 pub mod regex;
+pub mod claps;
 
 
 struct Person {
@@ -153,7 +154,9 @@ fn main() {
   //spawn::test();
   //csv::testCSV();
 
-  regex::test();
+  //regex::test();
+
+  claps::testclaps();
 
 }
 
